@@ -73,22 +73,25 @@ function setButton(button) { // Sets up and displays the contents of the popup
     tooltip.style.display = "block";
     tooltip.style.left = "-9999px";
 
-    // Gets the button's position
-    const rect = button.getBoundingClientRect();
+    // Delays the positioning of the button until measurements are done
+    requestAnimationFrame(() => {
+        // Gets the button's position
+        const rect = button.getBoundingClientRect();
 
-    const tooltipWidth = tooltip.offsetWidth;
+        const tooltipWidth = tooltip.offsetWidth;
 
-    tooltip.style.position = "absolute";
-    tooltip.style.top = rect.top + window.scrollY + "px";
+        tooltip.style.position = "absolute";
+        tooltip.style.top = rect.top + window.scrollY + "px";
 
-    // Displays the tooltip relative to the right of the button
-    if (button.classList.contains("right")) {
-        tooltip.style.left = rect.left + window.scrollX + 10 + "px";
+        // Displays the tooltip relative to the right of the button
+        if (button.classList.contains("right")) {
+            tooltip.style.left = rect.left + window.scrollX + 10 + "px";
 
-    // Displays the tooltip relative to the left of the button
-    } else {
-        tooltip.style.left = rect.left + window.scrollX - tooltipWidth - 10 + "px";
-    }
+        // Displays the tooltip relative to the left of the button
+        } else {
+            tooltip.style.left = rect.left + window.scrollX - tooltipWidth - 10 + "px";
+        }
 
-    tooltip.style.visibility = 
+        tooltip.style.visibility = "visible";
+    });
 }
