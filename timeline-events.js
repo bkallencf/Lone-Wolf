@@ -4,11 +4,12 @@ const tooltip = document.getElementById("tooltip");
 
 // Content of each tooltip
 const tooltipContent = {
-    medicine: <p>Medicine Lodge Treaty (1867)</p>
+    medicine: <p>Medicine Lodge Treaty (1867)</p>,
+    lonewolf: <p>Lone Wolf v. Hitchcock (1903)</p>
 };
 
 for (let button of buttons) {
-    button.addEventListener("click", function() {
+    button.addEventListener("mouseover", function() {
         
         // Chooses which content from tooltipContent to use with the button's id
         const content = tooltipContent[button.id];
