@@ -8,6 +8,7 @@ const tooltipContent = {
     lonewolf: "Lone Wolf v. Hitchcock (1903)"
 };
 
+// Displays mouseover content
 for (let button of buttons) {
     button.addEventListener("mouseover", function() {
         
@@ -22,11 +23,16 @@ for (let button of buttons) {
             // Gets the button's position
             const rect = button.getBoundingClientRect();
 
+            tooltip.style.position = "absolute";
+            tooltip.style.top = rect.top + window.scrollY + "px";
+
+            // Displays the tooltip relative to the right of the button
             if (button.classList.contains("right")) {
-                // Displays the tooltip relative to the rght of the button
-                tooltip.style.position = "absolute";
                 tooltip.style.left = rect.right + window.scrollX + 10 + "px";
-                tooltip.style.top = rect.top + window.scrollY + "px";
+
+            // Displays the tooltip relative to the left of the button
+            } else {
+                tooltip.style.right = rect.left + window.scrollX + 10 + "px";
             }
         }
     });

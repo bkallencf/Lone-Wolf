@@ -2,6 +2,34 @@ p {
     font-family: sans-serif;
 }
 
+button {
+    position: absolute;
+    width: 150px;
+    padding: 10px;
+    font-family: sans-serif;
+    z-index: 1;
+}
+
+#timeline-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    background-color: black;
+    z-index: 0;
+}
+
+.left {
+    left: calc(50% - 170px);
+}
+
 #tooltip {
     display: none;
     position: absolute;
