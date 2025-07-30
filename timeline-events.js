@@ -81,7 +81,7 @@ function setButton(button) { // Sets up and displays the contents of the popup
         const tooltipWidth = tooltip.offsetWidth;
 
         tooltip.style.position = "absolute";
-        tooltip.style.top = rect.top + window.scrollY + "px";
+        tooltip.style.top = button.offsetTop + "px";
 
         // Displays the tooltip relative to the right of the button
         if (button.classList.contains("right")) {
