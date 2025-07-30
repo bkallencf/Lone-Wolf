@@ -1,13 +1,3 @@
-h1 {
-    position: relative;
-    left:50%;
-}
-
-h2 {
-    position: relative;
-    left: 50%;
-}
-
 footer {
     background: radial-gradient(circle, SkyBlue, SkyBlue 50%, LightCyan 50%, SkyBlue);
     background-size: 8px 8px;
