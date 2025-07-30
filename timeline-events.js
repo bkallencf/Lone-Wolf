@@ -4,8 +4,8 @@ const tooltip = document.getElementById("tooltip");
 
 // Content of each tooltip
 const tooltipContent = {
-    medicine: `<p>Medicine Lodge Treaty (1867)</p>`,
-    lonewolf: `<p>Lone Wolf v. Hitchcock (1903)</p>`
+    medicine: "Medicine Lodge Treaty (1867)",
+    lonewolf: "Lone Wolf v. Hitchcock (1903)"
 };
 
 for (let button of buttons) {
@@ -16,7 +16,7 @@ for (let button of buttons) {
 
         // Displays the bubble
         if (content) {
-            tooltip.innerHTML = content;
+            tooltip.textContent = content;
             tooltip.style.display = "block";
 
             // Gets the button's position
