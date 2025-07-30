@@ -22,10 +22,12 @@ for (let button of buttons) {
             // Gets the button's position
             const rect = button.getBoundingClientRect();
 
-            // Displays the tooltip relative to the button
-            tooltip.style.position = "absolute";
-            tooltip.style.left = rect.right + window.scrollX + 10 + "px";
-            tooltip.style.top = rect.top + window.scrollY + "px";
+            if (button.classList.contains("right")) {
+                // Displays the tooltip relative to the rght of the button
+                tooltip.style.position = "absolute";
+                tooltip.style.left = rect.right + window.scrollX + 10 + "px";
+                tooltip.style.top = rect.top + window.scrollY + "px";
+            }
         }
     });
 
