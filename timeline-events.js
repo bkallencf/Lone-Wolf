@@ -4,8 +4,8 @@ const tooltip = document.getElementById("tooltip");
 
 // Content of each tooltip
 const tooltipContent = {
-    medicine: <p>Medicine Lodge Treaty (1867)</p>,
-    lonewolf: <p>Lone Wolf v. Hitchcock (1903)</p>
+    medicine: `<p>Medicine Lodge Treaty (1867)</p>`,
+    lonewolf: `<p>Lone Wolf v. Hitchcock (1903)</p>`
 };
 
 for (let button of buttons) {
