@@ -8,14 +8,15 @@ button {
     padding: 10px;
     font-family: sans-serif;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 .left {
-    left: calc(50% - 170px);
+    left: calc(50% - 160px);
 }
 
 .right {
-    left: calc(50% + 20px);
+    left: calc(50% + 10px);
 }
 
 #timeline-container {
