@@ -8,13 +8,22 @@ const tooltipContent = {
 };
 
 for (let button of buttons) {
-    button.addEventListener("mouseover", function(event) {
+    button.addEventListener("mouseover", function() {
+        
+        // Chooses which content from tooltipContent to use with the button's id
         const content = tooltipContent[button.id];
+
+        // Displays the bubble
         if (content) {
             tooltip.innerHTML = content;
             tooltip.style.display = "block";
-            tooltip.style.left = (event.pageX + 10) + "px";
-            tooltip.style.top = (event.pageY + 10) + "px";
+
+            // Gets the button's position
+            const rect = button.getBoundingClientRect();
+
+            tooltip.style.position = "absolute";
+            tooltip.style.left = rect.right + window.scrollX + 10 + "px";
+            tooltip.style.top = rect.top + window.scrollY + "px";
         }
     });
 
