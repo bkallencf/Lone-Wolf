@@ -66,17 +66,17 @@ function checkEvents() { // Displays button content
 function setButton(button) { // Sets up and displays the contents of the popup
     // Chooses which content from tooltipContent to use with the button's id
     const content = tooltipContent[button.id];
+    if (!content) return;
 
-    if (content) {
-        tooltip.textContent = content;
-    } else {
-        return;
-    }
-
+    // Temporarily creates the tooltip off-screen to measure its length for positioning
+    tooltip.style.visibility = "hidden";
     tooltip.style.display = "block";
+    tooltip.style.left = "-9999px";
 
     // Gets the button's position
     const rect = button.getBoundingClientRect();
+
+    const tooltipWidth = tooltip.offsetWidth;
 
     tooltip.style.position = "absolute";
     tooltip.style.top = rect.top + window.scrollY + "px";
@@ -84,11 +84,11 @@ function setButton(button) { // Sets up and displays the contents of the popup
     // Displays the tooltip relative to the right of the button
     if (button.classList.contains("right")) {
         tooltip.style.left = rect.left + window.scrollX + 10 + "px";
-        tooltip.style.right = "";
 
     // Displays the tooltip relative to the left of the button
     } else {
-        tooltip.style.right = (rect.right + window.scrollX - tooltip.offsetWidth - 10) + "px";
-        tooltip.style.left = "";
+        tooltip.style.left = rect.left + window.scrollX - tooltipWidth - 10 + "px";
     }
+
+    tooltip.style.visibility = 
 }
