@@ -1,50 +1,46 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    background: lightcyan;
+}
+
 h1 {
-    position: absolute;
-    left: 50%;
-    top: 20px;
+    text-align: center;
 }
 
 h2 {
-    position: absolute;
-    left: 50%;
-    top: 60px;
+    text-align: center;
 }
 
 footer {
-    background: radial-gradient(circle, SkyBlue, SkyBlue 50%, LightCyan 50%, SkyBlue);
-    background-size: 8px 8px;
+    background: lightskyblue;
+    background-size: 100px 100px;
     font-family: sans-serif;
     padding: 16px;
 }
 
-button {
+.button {
     position: absolute;
-    width: 150px;
-    padding: 10px;
-    font-family: sans-serif;
+    height: 30px;
+    width: 30px;
+    left: calc(50% - 12.5px);
+    border-radius: 50%;
+    background-color: green;
     z-index: 1;
-    box-sizing: border-box;
-}
-
-.left {
-    left: calc(50% - 160px);
-}
-
-.right {
-    left: calc(50% + 10px);
+    border: none;
 }
 
 #timeline-container {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    top: 100px;
+    top: 0px;
 }
 
 #timeline-line {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 0px;
     left: 50%;
     width: 5px;
     background-color: black;

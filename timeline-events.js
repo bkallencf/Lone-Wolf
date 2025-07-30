@@ -39,11 +39,14 @@ function checkEvents() { // Displays button content
             buttonLocked = true;
             setButton(button);
 
+            button.style.backgroundColor = "red";
+
             // Disables this button and re-enables all other buttons
             button.disabled = true;
             for (let otherButton of buttons) {
                 if (otherButton !== button) {
                     otherButton.disabled = false;
+                    otherButton.style.backgroundColor = "green";
                 }
             }
         });
@@ -58,6 +61,7 @@ function checkEvents() { // Displays button content
             // Re-enables all buttons
             for (let button of buttons) {
                 button.disabled = false;
+                button.style.backgroundColor = "green";
             }
         }
     }); 
@@ -67,31 +71,24 @@ function setButton(button) { // Sets up and displays the contents of the popup
     // Chooses which content from tooltipContent to use with the button's id
     const content = tooltipContent[button.id];
     if (!content) return;
+    tooltip.textContent = content;
 
-    // Temporarily creates the tooltip off-screen to measure its length for positioning
-    tooltip.style.visibility = "hidden";
     tooltip.style.display = "block";
-    tooltip.style.left = "-9999px";
 
-    // Delays the positioning of the button until measurements are done
-    requestAnimationFrame(() => {
-        // Gets the button's position
-        const rect = button.getBoundingClientRect();
+    // Gets the button's position
+    const rect = button.getBoundingClientRect();
 
-        const tooltipWidth = tooltip.offsetWidth;
+    const tooltipWidth = tooltip.offsetWidth;
 
-        tooltip.style.position = "absolute";
-        tooltip.style.top = button.offsetTop + "px";
+    tooltip.style.position = "absolute";
+    tooltip.style.top = button.offsetTop + "px";
 
-        // Displays the tooltip relative to the right of the button
-        if (button.classList.contains("right")) {
-            tooltip.style.left = rect.left + window.scrollX + 10 + "px";
+    // Displays the tooltip relative to the right of the button
+    if (button.classList.contains("right")) {
+        tooltip.style.left = rect.right + window.scrollX + 10 + "px";
 
-        // Displays the tooltip relative to the left of the button
-        } else {
-            tooltip.style.left = rect.left + window.scrollX - tooltipWidth - 10 + "px";
-        }
-
-        tooltip.style.visibility = "visible";
-    });
+    // Displays the tooltip relative to the left of the button
+    } else {
+        tooltip.style.left = rect.left + window.scrollX - tooltipWidth - 10 + "px";
+    }
 }
