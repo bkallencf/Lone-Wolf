@@ -88,7 +88,7 @@ function setButton(button) { // Sets up and displays the contents of the popup
 
     // Displays the tooltip relative to the left of the button
     } else {
-        tooltip.style.right = (rect.left + window.scrollX - tooltip.offsetWidth - 10) + "px";
-        tooltip.style.left = "";
+        tooltip.style.left = (rect.left + window.scrollX - tooltip.offsetWidth - 10) + "px";
+        tooltip.style.right = "";
     }
 }

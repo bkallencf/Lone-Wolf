@@ -1,10 +1,10 @@
 h1 {
-    position: absolute;
+    position: relative;
     left:50%;
 }
 
 h2 {
-    position: absolute;
+    position: relative;
     left: 50%;
 }
 
