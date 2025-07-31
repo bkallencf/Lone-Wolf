@@ -5,6 +5,10 @@ const tooltip = document.getElementById("tooltip");
 // Content of each tooltip
 const tooltipContent = {
     medicine: "Medicine Lodge Treaty (1867)",
+    dawes: "General Allotment Act (1887)",
+    jerome: "Jerome Commission and the Treaty of 1892 (1892)",
+    forthall: "An Act to Ratify an Agreement... (1900)",
+    allotment: "Land Seizures (1902)",
     lonewolf: "Lone Wolf v. Hitchcock (1903)"
 };
 
@@ -46,7 +50,7 @@ function checkEvents() { // Displays button content
             for (let otherButton of buttons) {
                 if (otherButton !== button) {
                     otherButton.disabled = false;
-                    otherButton.style.backgroundColor = "green";
+                    otherButton.style.backgroundColor = "#007200";
                 }
             }
         });
@@ -61,7 +65,7 @@ function checkEvents() { // Displays button content
             // Re-enables all buttons
             for (let button of buttons) {
                 button.disabled = false;
-                button.style.backgroundColor = "green";
+                button.style.backgroundColor = "#007200";
             }
         }
     }); 

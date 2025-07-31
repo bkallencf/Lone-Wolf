@@ -1,7 +1,12 @@
-html, body {
+html {
+    background: lightgray;
+}
+
+body {
     height: 100%;
     margin: 0px;
     background: lightcyan;
+    font-family: Cambria;
 }
 
 h1 {
@@ -10,6 +15,7 @@ h1 {
 
 h2 {
     text-align: center;
+    font-weight: normal;
 }
 
 footer {
@@ -25,9 +31,25 @@ footer {
     width: 30px;
     left: calc(50% - 12.5px);
     border-radius: 50%;
-    background-color: green;
+    background-color: #007200;
     z-index: 1;
     border: none;
+}
+
+.left-year {
+    position: absolute;
+    left: calc(50% + 25px);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+
+.right-year {
+    position: absolute;
+    left: calc(50% - 65px);
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Helvetica;
 }
 
 #timeline-container {
@@ -39,10 +61,10 @@ footer {
 
 #timeline-line {
     position: absolute;
-    top: 0;
+    top: 0px;
     bottom: 0px;
     left: 50%;
-    width: 5px;
+    width: 4px;
     background-color: black;
     z-index: 0;
 }
@@ -50,8 +72,8 @@ footer {
 #tooltip {
     display: none;
     position: absolute;
-    background-color: #ffffff;
-    border: 1px solid #000000;
+    background-color: #f6fffb;
+    border: 1px solid #28f190;
     padding: 8px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
