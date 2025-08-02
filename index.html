@@ -7,47 +7,61 @@
     </head>
 
     <body>
+        <!-- TODO: Remove the gap btwn the headers -->
         <h1><em>Lone Wolf v. Hitchcock</em> (1903):</h1>
-            <h2>Temp secondary header</h2>
+        <h1 style="font-weight: normal; font-size: 24px;">The Rise of Plenary Power (WIP)</h1>
+
+        <!-- TODO: Round out the edges of the buttons -->
+        <div id="menu">
+            <button disabled="true" style="background-color: #248b80;">Timeline</button>
+            <a href="bibliography.html"><button>Bibliography</button></a>
+        </div>
+        <h2>Timeline</h2>
         <div id="timeline-container">
+            <div class="timeline-cap" style="top: 0px;"></div>
             <div id="timeline-line"></div>
 
             <!-- ~10 yrs = 100px -->
             <div>
-                <button class="button right" id="medicine" style="top: 20px;"></button>
+                <button class="node right" id="medicine" style="top: 20px;"></button>
                 <span class="right-year" style="top: 23px;">1867</span>
             </div>
 
             <div>
-                <button class="button left" id="dawes" style="top: 220px;"></button>
+                <button class="node left" id="dawes" style="top: 220px;"></button>
                 <span class="left-year" style="top: 223px;">1887</span>
             </div>
 
             <div>
-                <button class="button left" id="jerome" style="top: 300px;"></button>
-                <span class="left-year" style="top: 303px;">1892</span>
+                <button class="node right" id="jerome" style="top: 300px;"></button>
+                <span class="right-year" style="top: 303px;">1892</span>
             </div>
 
             <div>
-                <button class="button left" id="forthall" style="top: 400px;"></button>
+                <button class="node left" id="fortHall" style="top: 400px;"></button>
                 <span class="left-year" style="top: 403px;">1900</span>
             </div>
 
             <div>
-                <button class="button left" id="allotment" style="top: 450px;"></button>
+                <button class="node left" id="allotment" style="top: 450px;"></button>
                 <span class="left-year" style="top: 453px;">1902</span>
             </div>
 
             <div>
-                <button class="button left" id="lonewolf" style="top: 500px;"></button>
-                <span class="left-year" style="top: 503px;">1903</span>
+                <button class="node right" id="loneWolf" style="top: 500px;"></button>
+                <span class="right-year" style="top: 503px;">1903</span>
             </div>
+            <div class="timeline-cap" style="bottom: 0px;"></div>
 
             <div id="tooltip"></div>
         </div>
 
-        <footer>
-            <a href="bibliography.html">Bibliography</a>
-        </footer>
+
+        <h3>Modern Outcomes</h3>
+        <div style="padding: 0px 100px 30px 100px;">
+            <p>This is a test of this</p>
+        </div>
+
+        <footer></footer>
     </body>
 </html>

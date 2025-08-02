@@ -1,55 +1,104 @@
+/*
+Position
+Measurements
+Padding
+Colors
+Font
+Other
+*/
+
 html {
-    background: lightgray;
+    background: lightskyblue;
 }
 
 body {
     height: 100%;
     margin: 0px;
+    margin-top: 50px;
+    padding-top: 20px;
     background: lightcyan;
-    font-family: Cambria;
+    font-family: Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 30px;
+    font-family: Cambria;
 }
 
-h2 {
+h1:first-of-type {
+    margin-bottom: -10px;
+}
+
+h2, h3 {
     text-align: center;
-    font-weight: normal;
+    font-family: 'Segoe UI';
 }
 
 footer {
+    padding-bottom: 100px;
     background: lightskyblue;
     background-size: 100px 100px;
     font-family: sans-serif;
-    padding: 16px;
 }
 
-.button {
+button {
+    width: 40%;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #72ece0;
+    border: 2px solid #00bbff;
+    color: black;
+    font-family: 'Segoe UI';
+    font-size: medium;
+    cursor: pointer;
+}
+
+.node {
     position: absolute;
+    left: calc(50% - 12.5px);
+    z-index: 1;
     height: 30px;
     width: 30px;
-    left: calc(50% - 12.5px);
     border-radius: 50%;
     background-color: #007200;
-    z-index: 1;
-    border: none;
+    border: 1px solid #28f190;
+    cursor: pointer;
 }
 
 .left-year {
     position: absolute;
     left: calc(50% + 25px);
+    font-family: Helvetica, Arial;
     font-weight: bold;
     font-size: 20px;
-    font-family: Helvetica;
 }
 
 .right-year {
     position: absolute;
     left: calc(50% - 65px);
+    font-family: Helvetica, Arial;
     font-weight: bold;
     font-size: 20px;
-    font-family: Helvetica;
+}
+
+.timeline-cap {
+    position: absolute;
+    left: calc(50% - 18px);
+    z-index: 0;
+    height: 4px;
+    width: 40px;
+    background-color: black;
+}
+
+.source {
+    text-indent: -2em;
+    padding-left: 2em;
+}
+
+.annotation {
+    padding-left: 2em;
 }
 
 #timeline-container {
@@ -61,20 +110,58 @@ footer {
 
 #timeline-line {
     position: absolute;
-    top: 0px;
-    bottom: 0px;
+    z-index: 0;
     left: 50%;
     width: 4px;
+    top: 0px;
+    bottom: 0px;
     background-color: black;
-    z-index: 0;
 }
 
 #tooltip {
-    display: none;
     position: absolute;
-    background-color: #f6fffb;
-    border: 1px solid #28f190;
+    max-width: 500px;
+    min-width: 300px;
     padding: 8px;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    background-color: #f6fffb;
+    border: 1px solid #28f190;
+    font-family: 'Segoe UI';
+    display: none;
+}
+
+#tooltip.left-pointer::after {
+    position: absolute;
+    z-index: 0;
+    right: -40px;
+    top: 10px;
+    border-width: 20px;
+    background: #f6fffb;
+    border-style: solid;
+    border-color: lightcyan lightcyan lightcyan #28f190;
+    content: "";
+}
+
+#tooltip.right-pointer::after {
+    position: absolute;
+    z-index: 0;
+    left: -40px;
+    top: 10px;
+    background: #f6fffb;
+    border-width: 20px;
+    border-style: solid;
+    border-color: lightcyan #28f190 lightcyan lightcyan;
+    content: "";
+}
+
+#menu {
+    text-align: center;
+}
+
+#bibliography {
+    padding-left: 200px;
+    padding-right: 200px;
+    line-height: 2;
+    font-family: "Times New Roman";
+    font-size: 12pt;
 }
