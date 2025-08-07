@@ -2,21 +2,41 @@
 <html>
     <head>
         <title>Lone Wolf v. Hitchcock (1903)</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css" />
         <script src="timeline-events.js" defer></script>
     </head>
 
     <body>
-        <!-- TODO: Remove the gap btwn the headers -->
         <h1><em>Lone Wolf v. Hitchcock</em> (1903):</h1>
-        <h1 style="font-weight: normal; font-size: 24px;">The Rise of Plenary Power (WIP)</h1>
+        <h1 style="font-weight: normal; font-size: 24px;">The Disasters of Plenary Power</h1>
 
-        <!-- TODO: Round out the edges of the buttons -->
         <div id="menu">
             <button disabled="true" style="background-color: #248b80;">Timeline</button>
+            <a href="outline.html"><button>Outline</button></a>
             <a href="bibliography.html"><button>Bibliography</button></a>
         </div>
+
+        <h2>Overview</h2>
+        <!-- TODO: add a border to the text? -->
+        <div style="padding: 0px 180px 30px 180px;">
+            <div id="overview">
+                <p>
+                    At the turn of the 20th century, as the USA sought to expand its lands, Congress began using its power to further encroach on Native lands. One 
+                    such case, <em>Lone Wolf v. Hitchcock (1903)</em>, sought to fight against these unjust seizures. Ultimately, the case gave Congress complete power to 
+                    manage Native lands however they pleased without judicial oversight. This empowered Congress to be more aggressive in its land seizures and 
+                    completely nullified the treaties whose power was already beginning to wane. Built upon the Marshall Trilogy, <em>United States v. Kagama (1886)</em>, and 
+                    the colonialist attitude enforced by the Dawes Act, the plenary power endowed by the Court stood as a threat to Native sovereignty, which remains 
+                    in the law.
+                </p>
+            </div>
+        </div>
+
         <h2>Timeline</h2>
+        <p style="text-align: center; margin-top: -10px; color: grey; font-size: 14px;">Hover over or click a node to see details.</p>
         <div id="timeline-container">
             <div class="timeline-cap" style="top: 0px;"></div>
             <div id="timeline-line"></div>
@@ -25,6 +45,11 @@
             <div>
                 <button class="node right" id="medicine" style="top: 20px;"></button>
                 <span class="right-year" style="top: 23px;">1867</span>
+            </div>
+
+            <div>
+                <button class="node left" id="kagama" style="top: 170px;"></button>
+                <span class="left-year" style="top: 173px;">1886</span>
             </div>
 
             <div>
@@ -43,7 +68,7 @@
             </div>
 
             <div>
-                <button class="node left" id="allotment" style="top: 450px;"></button>
+                <button class="node left" id="resistance" style="top: 450px;"></button>
                 <span class="left-year" style="top: 453px;">1902</span>
             </div>
 
@@ -51,15 +76,31 @@
                 <button class="node right" id="loneWolf" style="top: 500px;"></button>
                 <span class="right-year" style="top: 503px;">1903</span>
             </div>
+
+            <div>
+                <button class="node left" id="reparations" style="top: 800px;"></button>
+                <span class="left-year" style="top: 803px;">1955+</span>
+            </div>
+
             <div class="timeline-cap" style="bottom: 0px;"></div>
 
             <div id="tooltip"></div>
         </div>
 
-
-        <h3>Modern Outcomes</h3>
-        <div style="padding: 0px 100px 30px 100px;">
-            <p>This is a test of this</p>
+        <h2>Plenary Power</h2>
+        <div style="padding: 0px 180px 30px 180px;">
+            <div id="plenary">
+                <p>
+                    The doctrine of plenary power is antithetical to the design of checks and balances proposed within the Constitution, yet it persists in law to this day. 
+                    While it may not be used to remove Natives from their lands, it serves as a justification for much of federal Indian policy, including the Indian Child 
+                    Welfare Act and around 111 cases (Ishtani and Fay). While Congress has additionally pulled its power from other parts of the Constitution, its 
+                    unchecked plenary powers over Native affairs remain an underlying danger for Native sovereignty. Fortunately, all is not so downhearted as 
+                    continued activism and decisions by the Court have questioned plenary power. Examining the plenary power doctrine has resulted in the 
+                    paradoxical conclusion that Congress' power is plenary but not absolute, as it is constrained by the Constitution (Steele). However, these limits in 
+                    actuality do little to prevent Congress' authority. Therefore, as long as the doctrine of plenary power exists within the law, permanent vigilance must 
+                    be retained to prevent the violation of the rights and well-being of Native Americans.
+                </p>
+            </div>
         </div>
 
         <footer></footer>
